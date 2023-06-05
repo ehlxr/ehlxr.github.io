@@ -1,0 +1,251 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=2"><meta name="theme-color" content="#222"><meta name="generator" content="Hexo 4.2.1"><link rel="apple-touch-icon" sizes="180x180" href="https://cdn.jsdelivr.net/gh/0vo/oss/images/favicon.ico?v=7.4.1"><link rel="icon" type="image/png" sizes="32x32" href="https://cdn.jsdelivr.net/gh/0vo/oss/images/favicon.ico?v=7.4.1"><link rel="icon" type="image/png" sizes="16x16" href="https://cdn.jsdelivr.net/gh/0vo/oss/images/favicon.ico?v=7.4.1"><link rel="mask-icon" href="https://cdn.jsdelivr.net/gh/0vo/oss/images/favicon.ico?v=7.4.1" color="#222"><link rel="alternate" href="/atom.xml" title="Ehlxr's Blog" type="application/atom+xml"><meta name="google-site-verification" content="F10oBMYHtBN4295aHavGAYWSfIxhy1KXoZRBqwg2KyI"><link rel="stylesheet" href="/css/main.css?v=7.4.1"><link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|Damion:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext"><link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0"><link rel="stylesheet" href="/lib/pace/pace-theme-loading-bar.min.css?v=1.0.2"><script src="/lib/pace/pace.min.js?v=1.0.2"></script><script id="hexo-configurations">var NexT=window.NexT||{},CONFIG={root:"/",scheme:"Mist",version:"7.4.1",exturl:!1,sidebar:{position:"right",display:"hide",offset:12,onmobile:!0},copycode:{enable:!0,show_result:!0,style:null},back2top:{enable:!0,sidebar:!1,scrollpercent:!0},bookmark:{enable:!1,color:"#222",save:"auto"},fancybox:!1,mediumzoom:!0,lazyload:!1,pangu:!1,algolia:{appID:"",apiKey:"",indexName:"",hits:{per_page:10},labels:{input_placeholder:"Search for Posts",hits_empty:"We didn't find any results for the search: ${query}",hits_stats:"${hits} results found in ${time} ms"}},localsearch:{enable:!0,trigger:"auto",top_n_per_article:1,unescape:!0,preload:!1},path:"search.xml",motion:{enable:!0,async:!0,transition:{post_block:"fadeIn",post_header:"slideDownIn",post_body:"slideDownIn",coll_header:"slideLeftIn",sidebar:"slideUpIn"}},translation:{copy_button:"复制",copy_success:"复制成功",copy_failure:"复制失败"},sidebarPadding:40}</script><meta name="description" content="GitHub Pages 是 GitHub 提供的免费开源的静态站点托管服务，利用这个服务可以搭建轻量级的博客系统，本文介绍了如何使用 Hexo 结合 GitHub Pages 服务搭建个人博客。  一、安装配置 Git1.1 安装 Git使用 GitHub 首先要安装 Git，可根据操作系统下载不同版本的 Git，Windows 下载地址：https:&#x2F;&#x2F;git-scm.com&#x2F;downloa"><meta property="og:type" content="article"><meta property="og:title" content="使用Hexo基于GitHub Pages搭建个人博客（一）"><meta property="og:url" content="https://ehlxr.me/2016/07/23/%E4%BD%BF%E7%94%A8Hexo%E5%9F%BA%E4%BA%8EGitHub-Pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%80%EF%BC%89/index.html"><meta property="og:site_name" content="Ehlxr&#39;s Blog"><meta property="og:description" content="GitHub Pages 是 GitHub 提供的免费开源的静态站点托管服务，利用这个服务可以搭建轻量级的博客系统，本文介绍了如何使用 Hexo 结合 GitHub Pages 服务搭建个人博客。  一、安装配置 Git1.1 安装 Git使用 GitHub 首先要安装 Git，可根据操作系统下载不同版本的 Git，Windows 下载地址：https:&#x2F;&#x2F;git-scm.com&#x2F;downloa"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://cdn.jsdelivr.net/gh/0vo/oss/images/20160723141920.png"><meta property="og:image" content="https://cdn.jsdelivr.net/gh/0vo/oss/images/20160723142100.png"><meta property="og:image" content="https://cdn.jsdelivr.net/gh/0vo/oss/images/20160723144829.png"><meta property="og:image" content="https://cdn.jsdelivr.net/gh/0vo/oss/images/20160723142019.png"><meta property="og:image" content="https://cdn.jsdelivr.net/gh/0vo/oss/images/20160723142036.png"><meta property="og:image" content="https://cdn.jsdelivr.net/gh/0vo/oss/images/20160723165328.png"><meta property="og:image" content="https://cdn.jsdelivr.net/gh/0vo/oss/images/20160723171101.png"><meta property="og:image" content="https://cdn.jsdelivr.net/gh/0vo/oss/images/20160723190223.png"><meta property="article:published_time" content="2016-07-23T11:35:43.000Z"><meta property="article:modified_time" content="2023-06-05T11:57:21.689Z"><meta property="article:author" content="!!@_@ ᵛᵉ"><meta property="article:tag" content="Hexo"><meta property="article:tag" content="GitHub"><meta property="article:tag" content="Git"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/0vo/oss/images/20160723141920.png"><link rel="canonical" href="https://ehlxr.me/2016/07/23/%E4%BD%BF%E7%94%A8Hexo%E5%9F%BA%E4%BA%8EGitHub-Pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%80%EF%BC%89/"><script id="page-configurations">CONFIG.page={sidebar:"",isHome:!1,isPost:!0,isPage:!1,isArchive:!1}</script><link rel="stylesheet" href="//cdn.jsdelivr.net/gh/theme-next/theme-next-needmoreshare2@1/needsharebutton.min.css"><style>#needsharebutton-postbottom{cursor:pointer;height:26px;margin-top:10px;position:relative}#needsharebutton-postbottom .btn{border:1px solid $btn-default-border-color;border-radius:3px;display:initial;padding:1px 4px}</style><style>#needsharebutton-float{bottom:88px;cursor:pointer;left:-8px;position:fixed;z-index:9999}#needsharebutton-float .btn{border:1px solid $btn-default-border-color;border-radius:4px;padding:0 10px 0 14px}</style><script>((w, d) => {
+    'use strict';
+
+    //
+    //   const userScheme = localStorage.getItem('Scheme');
+    //   if (!userScheme) return;
+    //
+    //
+
+    const userScheme = localStorage.getItem('Scheme');
+    if(userScheme){
+      d.documentElement.className = 'darkScheme';
+    }
+    localStorage.removeItem('hasClickListener');
+
+  })(window, document);</script><title>使用Hexo基于GitHub Pages搭建个人博客（一） | Ehlxr's Blog</title><noscript><style>.sidebar-inner,.use-motion .brand,.use-motion .collection-header,.use-motion .comments,.use-motion .menu-item,.use-motion .pagination,.use-motion .post-block,.use-motion .post-body,.use-motion .post-header{opacity:initial}.use-motion .logo,.use-motion .site-subtitle,.use-motion .site-title{opacity:initial;top:initial}.use-motion .logo-line-before i{left:initial}.use-motion .logo-line-after i{right:initial}</style></noscript></head><body itemscope itemtype="http://schema.org/WebPage"><div class="container use-motion"><div class="headband"></div><header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="header-inner"><div class="site-brand-container"><div class="site-meta"><div><a href="/" class="brand" rel="start"><span class="logo-line-before"><i></i></span> <span class="site-title">Ehlxr's Blog</span><span class="logo-line-after"><i></i></span></a></div><h1 class="site-subtitle" itemprop="description">「闲言碎语」</h1></div><div class="site-nav-toggle"><div class="toggle" aria-label="切换导航栏"><span class="toggle-line toggle-line-first"></span><span class="toggle-line toggle-line-middle"></span><span class="toggle-line toggle-line-last"></span></div></div></div><nav class="site-nav"><ul id="menu" class="menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-fw fa-home"></i> 首页</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i> 归档</a></li><li class="menu-item menu-item-search"><a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i> 搜索</a></li></ul></nav><div class="site-search"><div class="popup search-popup"><div class="search-header"><span class="search-icon"><i class="fa fa-search"></i></span><div class="search-input-container"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="搜索..." spellcheck="false" type="text" id="search-input"></div><span class="popup-btn-close"><i class="fa fa-times-circle"></i></span></div><div id="search-result"></div></div><div class="search-pop-overlay"></div></div><div class="night-mode motion-element"><span class="delimiter">|</span><a role="button" class="night-btn"><i class="fa fa-adjust"></i></a></div><script>var st,OriginTitile=document.title;document.addEventListener("visibilitychange",function(){document.hidden?(document.title="╭(°A°`)╮好奇怪崩溃啦!",clearTimeout(st)):(document.title="(ฅ>ω<*ฅ) 噫又好了~ "+OriginTitile,st=setTimeout(function(){document.title=OriginTitile},4e3))})</script></div></header><div class="back-to-top"><i class="fa fa-arrow-up"></i> <span>0%</span></div><div class="reading-progress-bar"></div><main id="main" class="main"><div class="main-inner"><div class="content-wrap"><div id="content" class="content"><div class="posts-expand"><article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN"><link itemprop="mainEntityOfPage" href="https://ehlxr.me/2016/07/23/%E4%BD%BF%E7%94%A8Hexo%E5%9F%BA%E4%BA%8EGitHub-Pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%80%EF%BC%89/"><span hidden itemprop="author" itemscope itemtype="http://schema.org/Person"><meta itemprop="name" content="!!@_@ ᵛᵉ"><meta itemprop="description" content="瞻前顾后，惶惶不可终日"><meta itemprop="image" content="https://cdn.jsdelivr.net/gh/0vo/oss/images/logo_2.png"></span><span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization"><meta itemprop="name" content="Ehlxr's Blog"></span><header class="post-header"><h2 class="post-title" itemprop="name headline">使用Hexo基于GitHub Pages搭建个人博客（一）</h2><div class="post-meta"><span class="post-meta-item"><span class="post-meta-item-icon"><i class="fa fa-calendar-o"></i></span> <span class="post-meta-item-text">发表于</span> <time title="创建时间：2016-07-23 11:35:43" itemprop="dateCreated datePublished" datetime="2016-07-23T11:35:43+00:00">2016-07-23</time></span><span class="post-meta-item"><span class="post-meta-item-icon"><i class="fa fa-folder-o"></i></span> <span class="post-meta-item-text">分类于</span> <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Hexo/" itemprop="url" rel="index"><span itemprop="name">Hexo</span></a></span></span><span id="/2016/07/23/%E4%BD%BF%E7%94%A8Hexo%E5%9F%BA%E4%BA%8EGitHub-Pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%80%EF%BC%89/" class="post-meta-item leancloud_visitors" data-flag-title="使用Hexo基于GitHub Pages搭建个人博客（一）" title="阅读次数"><span class="post-meta-item-icon"><i class="fa fa-eye"></i></span> <span class="post-meta-item-text">阅读次数：</span><span class="leancloud-visitors-count"></span></span><span class="post-meta-item"><a title="show comments" href="/2016/07/23/%E4%BD%BF%E7%94%A8Hexo%E5%9F%BA%E4%BA%8EGitHub-Pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%80%EF%BC%89/#show_comments"><span class="post-meta-item-icon"><i class="fa fa-comment-o"></i></span></a></span><span class="post-meta-item" title="本文字数"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span> <span>2.3k</span></span><span class="post-meta-item" title="阅读时长"><span class="post-meta-item-icon"><i class="fa fa-clock-o"></i></span> <span>2 分钟</span></span></div></header><div class="post-body" itemprop="articleBody"><blockquote><p><code>GitHub Pages</code> 是 <code>GitHub</code> 提供的免费开源的静态站点托管服务，利用这个服务可以搭建轻量级的博客系统，本文介绍了如何使用 <code>Hexo</code> 结合 <code>GitHub Pages</code> 服务搭建个人博客。</p></blockquote><h1 id="一、安装配置-Git"><a href="#一、安装配置-Git" class="headerlink" title="一、安装配置 Git"></a>一、安装配置 <code>Git</code></h1><h2 id="1-1-安装-Git"><a href="#1-1-安装-Git" class="headerlink" title="1.1 安装 Git"></a>1.1 安装 <code>Git</code></h2><p>使用 <code>GitHub</code> 首先要安装 <code>Git</code>，可根据操作系统下载不同版本的 <code>Git</code>，<code>Windows</code> 下载地址：<a href="https://git-scm.com/download/win" target="_blank" rel="noopener">https://git-scm.com/download/win</a> 安装过程比较简单，选择默认选项配置即可下一步，不再叙述。</p><h2 id="1-2-配置-Git"><a href="#1-2-配置-Git" class="headerlink" title="1.2 配置 Git"></a>1.2 配置 <code>Git</code></h2><p>设置本地机器默认 <code>commit</code> 的昵称与 <code>Email</code>，姓名与 <code>Email</code> 只用于日志标识，实际推送到远程仓库时，要用有操作权限的账号登录。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name <span class="string">"ehlxr"</span></span><br><span class="line">git config --global user.email <span class="string">"ehlxr@qq.com"</span></span><br></pre></td></tr></table></figure><h1 id="二、生成-SSH-keys"><a href="#二、生成-SSH-keys" class="headerlink" title="二、生成 SSH keys"></a>二、生成 <code>SSH keys</code></h1><p><code>SSH Keys</code> 是 <code>GitHub</code> 推荐的公钥、秘钥形式验证用户合法性的机制，添加 <code>SSH Keys</code> 可以省去每次都要输入密码的步骤，下面将演示如何在本地计算机生成 <code>SSH Keys</code> 的公钥、秘钥。</p><a id="more"></a><h2 id="2-1-首先打开安装的-Git-Bash"><a href="#2-1-首先打开安装的-Git-Bash" class="headerlink" title="2.1 首先打开安装的 Git Bash"></a>2.1 首先打开安装的 <code>Git Bash</code></h2><p><img src="https://cdn.jsdelivr.net/gh/0vo/oss/images/20160723141920.png" alt=""></p><p><img src="https://cdn.jsdelivr.net/gh/0vo/oss/images/20160723142100.png" alt=""></p><h2 id="2-2-运行-ssh-keygen-命令"><a href="#2-2-运行-ssh-keygen-命令" class="headerlink" title="2.2 运行 ssh-keygen 命令"></a>2.2 运行 <code>ssh-keygen</code> 命令</h2><p>输入以下命令：（替换 <code>&quot;your_email@example.com&quot;</code> 为注册时候的邮箱）</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -b 4096 -C <span class="string">"your_email@example.com"</span></span><br></pre></td></tr></table></figure><h2 id="2-3-保存秘钥文件"><a href="#2-3-保存秘钥文件" class="headerlink" title="2.3 保存秘钥文件"></a>2.3 保存秘钥文件</h2><p>当出现以下提示时，直接敲回车键选择默认地址即可（保存私钥文件位置，默认保存在当前用户文件夹下的 <code>.ssh</code> 文件夹中，文件名称为 <code>id_rsa</code> ）</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Enter file <span class="keyword">in</span> <span class="built_in">which</span> to save the key (/c/Users/lt/.ssh/id_rsa):</span><br></pre></td></tr></table></figure><p>如果已经存在会提示，输入：y 敲回车替换即可</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">/c/Users/lt/.ssh/id_rsa already exists.</span><br><span class="line">Overwrite (y/n)?</span><br></pre></td></tr></table></figure><p>出现以下提示设置密码提示，不用设置密码，敲回车键即可</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Enter passphrase (empty <span class="keyword">for</span> no passphrase):</span><br></pre></td></tr></table></figure><p>再次确认密码提示，不用设密码敲回车即可</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Enter same passphrase again:</span><br></pre></td></tr></table></figure><p>出现以下提示，表明已经成功生成了 <code>SSH Keys</code></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">Your identification has been saved <span class="keyword">in</span> /c/Users/lt/.ssh/id_rsa.</span><br><span class="line">Your public key has been saved <span class="keyword">in</span> /c/Users/lt/.ssh/id_rsa.pub.</span><br><span class="line">The key fingerprint is:</span><br><span class="line">SHA256:dBtq6OOJs1JQat630kGqh420Y0JSb7smaR6c9jjo7h0 your_email@example.com</span><br><span class="line">The key<span class="string">'s randomart image is:</span></span><br><span class="line"><span class="string">+---[RSA 4096]----+</span></span><br><span class="line"><span class="string">|                 |</span></span><br><span class="line"><span class="string">|    .            |</span></span><br><span class="line"><span class="string">|   o    . o      |</span></span><br><span class="line"><span class="string">|  =   .o o o     |</span></span><br><span class="line"><span class="string">| + + o. S .      |</span></span><br><span class="line"><span class="string">|.oo.*.o.         |</span></span><br><span class="line"><span class="string">|oo=E +oo         |</span></span><br><span class="line"><span class="string">|o.#+Oooo         |</span></span><br><span class="line"><span class="string">|+OoO==o          |</span></span><br><span class="line"><span class="string">+----[SHA256]-----+</span></span><br></pre></td></tr></table></figure><p><a href="https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/" target="_blank" rel="noopener">Github 官网 SSH Keys 生成教程</a></p><h1 id="三、开启-GitHub-Pages-服务"><a href="#三、开启-GitHub-Pages-服务" class="headerlink" title="三、开启 GitHub Pages 服务"></a>三、开启 <code>GitHub Pages</code> 服务</h1><p><code>GitHub</code> 账户注册比较简单，注册免费使用的账户就可以了，这里就不细说了，需要注意的是尽量不要使用 <code>126/163</code> 邮箱注册，我在测试的时候收不到验证码，等收到验证码的时候已经第二天了，早就过期了，我使用 <code>Gmail</code> 和 <code>QQ</code> 邮箱都能很快收到验证码。</p><h2 id="3-1-添加生成的-SSH-Keys-到-GitHub"><a href="#3-1-添加生成的-SSH-Keys-到-GitHub" class="headerlink" title="3.1 添加生成的 SSH Keys 到 GitHub"></a>3.1 添加生成的 <code>SSH Keys</code> 到 <code>GitHub</code></h2><p>打开生成的 <code>SSH Keys</code> 公钥</p><p><img src="https://cdn.jsdelivr.net/gh/0vo/oss/images/20160723144829.png" alt=""></p><p>登录注册的 <code>GitHub</code> 账户，按照以下图示 <code>1</code>、<code>2</code>、<code>3</code>、<code>4</code>、<code>5</code>、<code>6</code>、<code>7</code> 步骤操作，复制公钥内容粘贴到下图 <code>步骤 5</code> 的 <code>Key</code> 输入框中，在 <code>步骤 6</code> 输入一个标题，点击 <code>步骤 7</code> 的 <code>Add SSH key</code> 按钮，这时候会提示你输入 <code>GitHub</code> 账号密码，输入密码确认即可添加成功。</p><p><img src="https://cdn.jsdelivr.net/gh/0vo/oss/images/20160723142019.png" alt=""></p><p><img src="https://cdn.jsdelivr.net/gh/0vo/oss/images/20160723142036.png" alt=""></p><h2 id="3-2-创建-GitHub-仓库"><a href="#3-2-创建-GitHub-仓库" class="headerlink" title="3.2 创建 GitHub 仓库"></a>3.2 创建 <code>GitHub</code> 仓库</h2><p>按照下图所示操作，仓库名称按照：<code>yourname.github.io</code> 格式创建，这样就可以通过 <code>yourname.github.io</code> 方式访问你的博客。如果创建名称为：<code>myblog</code> ,则博客的访问路径为 <code>yourname.github.io/myblog</code></p><p><img src="https://cdn.jsdelivr.net/gh/0vo/oss/images/20160723165328.png" alt=""></p><p><img src="https://cdn.jsdelivr.net/gh/0vo/oss/images/20160723171101.png" alt=""></p><p>填写完仓库名称，其他选项默认，点击 <code>Create repository</code> 即可完成创建。</p><h2 id="3-3-测试-GitHub-Pages-服务"><a href="#3-3-测试-GitHub-Pages-服务" class="headerlink" title="3.3 测试 GitHub Pages 服务"></a>3.3 测试 <code>GitHub Pages</code> 服务</h2><p>接下来在仓库根目录下创建一个 <code>index.html</code> 文件测试 <code>GitHub Pages</code> 服务是否开启成功。打开刚才创建的仓库，因为我们之前已经添加了 <code>SSH Keys</code>，所以选择复制如下图所示的 <code>SSH</code> 仓库连接</p><p><img src="https://cdn.jsdelivr.net/gh/0vo/oss/images/20160723190223.png" alt=""></p><p>在电脑磁盘创建一个文件夹（我创建在：<code>D:/lxr</code>）在 <code>Git Bash</code> 分别输入以下两条命令：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /d/lxr/ <span class="comment"># 进入创建的文件夹</span></span><br><span class="line"></span><br><span class="line">git init <span class="comment"># 初始化本地仓库</span></span><br></pre></td></tr></table></figure><p>在本地文件夹中创建 <code>index.html</code> 文件，随便输入一些内容即可，命令如下：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">"&lt;h1&gt;Hello World&lt;/h1&gt;"</span> &gt;&gt; index.html <span class="comment"># 创建 index.html 文件</span></span><br></pre></td></tr></table></figure><p>然后分别执行以下命令：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git add index.html <span class="comment"># 添加文件</span></span><br><span class="line">git commit -m <span class="string">"create index.html"</span> <span class="comment"># 提交文件</span></span><br><span class="line">git remote add origin git@github.com:ehlxr/ehlxr.github.io.git <span class="comment"># 添加 GitHub 仓库地址，注意地址填写自己注册的 GitHub 仓库地址</span></span><br><span class="line">git push -u origin master <span class="comment"># push 到 GitHub</span></span><br></pre></td></tr></table></figure><p>浏览器访问：<a href="http://ehlxr.github.io" target="_blank" rel="noopener">yourname.github.io</a> 如果出现 <code>index.html</code> 输入的内容，即 <code>GitHub Pages</code> 服务开启成功</p><hr></div><div class="popular-posts-header">相关文章</div><ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><a href="/2016/08/30/使用Hexo基于GitHub-Pages搭建个人博客（三）/" rel="bookmark">使用Hexo基于GitHub Pages搭建个人博客（三）</a></div></li><li class="popular-posts-item"><div class="popular-posts-title"><a href="/2016/07/28/update-from-github-fork/" rel="bookmark">GitHub 更新已经 fork 的项目</a></div></li><li class="popular-posts-item"><div class="popular-posts-title"><a href="/2016/07/23/使用Hexo基于GitHub-Pages搭建个人博客（二）/" rel="bookmark">使用Hexo基于GitHub Pages搭建个人博客（二）</a></div></li><li class="popular-posts-item"><div class="popular-posts-title"><a href="/2016/07/31/CentOS-系统下-GitLab-搭建与基本配置/" rel="bookmark">CentOS 系统下 GitLab 搭建与基本配置</a></div></li><li class="popular-posts-item"><div class="popular-posts-title"><a href="/2021/01/06/docker-gitea-share-port-22-with-host/" rel="bookmark">Docker 安装 Gitea/Gogs 与主机共享 22 端口</a></div></li></ul><div class="post-widgets"><div id="needsharebutton-postbottom"><span class="btn"><i class="fa fa-share-alt" aria-hidden="true"></i></span></div></div><div id="reward-container"><div>欣赏此文？求鼓励，求支持！</div><button id="reward-button" disable="enable" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">打赏</button><div id="qr" style="display:none"><div style="display:inline-block"><img src="https://cdn.jsdelivr.net/gh/0vo/oss/images/wechat-0.JPG" alt="!!@_@ ᵛᵉ 微信支付"><p>微信支付</p></div></div></div><div><ul class="post-copyright"><li class="post-copyright-author"><strong>本文作者：</strong> !!@_@ ᵛᵉ</li><li class="post-copyright-link"><strong>本文链接：</strong> <a href="https://ehlxr.me/2016/07/23/%E4%BD%BF%E7%94%A8Hexo%E5%9F%BA%E4%BA%8EGitHub-Pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%80%EF%BC%89/" title="使用Hexo基于GitHub Pages搭建个人博客（一）">https://ehlxr.me/2016/07/23/%E4%BD%BF%E7%94%A8Hexo%E5%9F%BA%E4%BA%8EGitHub-Pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%80%EF%BC%89/</a></li><li class="post-copyright-license"><strong>版权声明：</strong> 本博客所有文章除特别声明外，均采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i> BY-NC-SA</a> 许可协议。转载请注明出处！</li></ul></div><footer class="post-footer"><div class="post-tags"><a href="/tags/Git/" rel="tag"><i class="fa fa-tag"></i> Git</a><a href="/tags/GitHub/" rel="tag"><i class="fa fa-tag"></i> GitHub</a><a href="/tags/Hexo/" rel="tag"><i class="fa fa-tag"></i> Hexo</a></div><div class="post-widgets"><div class="wp_rating"><div id="wpac-rating"></div></div></div><div class="post-nav"><div class="post-nav-next post-nav-item"><a href="/2016/07/21/%E8%BD%AC-JMS%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/" rel="next" title="[转] JMS 基本概念"><i class="fa fa-chevron-left"></i> [转] JMS 基本概念</a></div><span class="post-nav-divider"></span><div class="post-nav-prev post-nav-item"><a href="/2016/07/23/%E4%BD%BF%E7%94%A8Hexo%E5%9F%BA%E4%BA%8EGitHub-Pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%BA%8C%EF%BC%89/" rel="prev" title="使用Hexo基于GitHub Pages搭建个人博客（二）">使用Hexo基于GitHub Pages搭建个人博客（二）<i class="fa fa-chevron-right"></i></a></div></div></footer></article></div></div><div class="comment-button-group" id="show_comments"><a class="btn comment-button disqus"><span class="disqus_title">显示 Disqus 评论</span></a> <a class="btn comment-button gitalk"><span class="gitalk_title">显示 Gitalk 评论</span></a> <a class="btn comment-button valine"><span class="gitalk_title">显示 Valine 评论</span></a></div><div class="comment-position disqus"><div class="comments" id="comments"><div id="disqus_thread"><noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript></div></div></div><div class="comment-position gitalk"><div class="comments" id="gitalk-container"></div></div><div class="comment-position valine"><div class="comments" id="comments"></div></div><script pjax>(function() {
+          let commentButton = document.querySelectorAll('.comment-button');
+            commentButton.forEach(item => {
+            let commentClass = item.classList[2];
+            item.addEventListener('click', () => {
+              commentButton.forEach(rmActive => rmActive.classList.remove('active'));
+              item.classList.add('active');
+              document.querySelectorAll('.comment-position').forEach(rmActive => rmActive.classList.remove('active'));
+              document.querySelector(`.comment-position.${commentClass}`).classList.add('active');
+              
+            });
+          });
+          let activeClass = 'gitalk';
+          
+          if (activeClass) {
+            let activeButton = document.querySelector(`.comment-button.${activeClass}`);
+            if (activeButton) {
+              activeButton.click();
+            }
+          }
+        })();</script></div><div class="toggle sidebar-toggle"><span class="toggle-line toggle-line-first"></span><span class="toggle-line toggle-line-middle"></span><span class="toggle-line toggle-line-last"></span></div><aside class="sidebar"><div class="sidebar-inner"><ul class="sidebar-nav motion-element"><li class="sidebar-nav-toc">文章目录</li><li class="sidebar-nav-overview">站点概览</li></ul><div class="post-toc-wrap sidebar-panel"><div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一、安装配置-Git"><span class="nav-text">一、安装配置 Git</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-安装-Git"><span class="nav-text">1.1 安装 Git</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-配置-Git"><span class="nav-text">1.2 配置 Git</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二、生成-SSH-keys"><span class="nav-text">二、生成 SSH keys</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-首先打开安装的-Git-Bash"><span class="nav-text">2.1 首先打开安装的 Git Bash</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-运行-ssh-keygen-命令"><span class="nav-text">2.2 运行 ssh-keygen 命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-保存秘钥文件"><span class="nav-text">2.3 保存秘钥文件</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#三、开启-GitHub-Pages-服务"><span class="nav-text">三、开启 GitHub Pages 服务</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-添加生成的-SSH-Keys-到-GitHub"><span class="nav-text">3.1 添加生成的 SSH Keys 到 GitHub</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-2-创建-GitHub-仓库"><span class="nav-text">3.2 创建 GitHub 仓库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-3-测试-GitHub-Pages-服务"><span class="nav-text">3.3 测试 GitHub Pages 服务</span></a></li></ol></li></ol></div></div><div class="site-overview-wrap sidebar-panel"><div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person"><img class="site-author-image" itemprop="image" src="https://cdn.jsdelivr.net/gh/0vo/oss/images/logo_2.png" alt="!!@_@ ᵛᵉ"><p class="site-author-name" itemprop="name">!!@_@ ᵛᵉ</p><div class="site-description" itemprop="description">瞻前顾后，惶惶不可终日</div></div><div class="site-state-wrap motion-element"><nav class="site-state"><div class="site-state-item site-state-posts"><a href="/archives/"><span class="site-state-item-count">85</span> <span class="site-state-item-name">日志</span></a></div><div class="site-state-item site-state-categories"><a href="/categories/"><span class="site-state-item-count">19</span> <span class="site-state-item-name">分类</span></a></div><div class="site-state-item site-state-tags"><a href="/tags/"><span class="site-state-item-count">66</span> <span class="site-state-item-name">标签</span></a></div></nav></div><div class="feed-link motion-element"><a href="/atom.xml" rel="alternate"><i class="fa fa-rss"></i> RSS</a></div><div class="links-of-author motion-element"><span class="links-of-author-item"><a href="/about" title="关于 &amp;rarr; &#x2F;about"><i class="fa fa-fw fa-user"></i></a></span><span class="links-of-author-item"><a href="/photos/" title="相册 &amp;rarr; &#x2F;photos&#x2F;"><i class="fa fa-fw fa-image"></i></a></span><span class="links-of-author-item"><a href="http://t.me/ehlxr" title="TG &amp;rarr; http:&#x2F;&#x2F;t.me&#x2F;ehlxr" rel="noopener" target="_blank"><i class="fa fa-fw fa-telegram"></i></a></span><span class="links-of-author-item"><a href="https://github.com/ehlxr" title="GitHub &amp;rarr; https:&#x2F;&#x2F;github.com&#x2F;ehlxr" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i></a></span></div><div class="cc-license motion-element" itemprop="license"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a></div><div class="links-of-blogroll motion-element"><div class="links-of-blogroll-title"><i class="fa fa-fw fa-link"></i> 友链</div><ul class="links-of-blogroll-list"><li class="links-of-blogroll-item"><a href="https://ehlxr.top/" title="https:&#x2F;&#x2F;ehlxr.top" rel="noopener" target="_blank">Home</a></li><li class="links-of-blogroll-item"><a href="https://about.me/ehlxr" title="https:&#x2F;&#x2F;about.me&#x2F;ehlxr" rel="noopener" target="_blank">About me</a></li><li class="links-of-blogroll-item"><a href="https://mritd.me/" title="https:&#x2F;&#x2F;mritd.me" rel="noopener" target="_blank">漠然</a></li><li class="links-of-blogroll-item"><a href="http://wiliam.me/" title="http:&#x2F;&#x2F;wiliam.me" rel="noopener" target="_blank">Wiliam</a></li></ul></div></div></div></aside><div id="sidebar-dimmer"></div></div></main><footer id="footer" class="footer"><div class="footer-inner"><div class="copyright">&copy; 2016 – <span itemprop="copyrightYear">2023</span><span class="with-love" id="animate"><i class="fa fa-anchor"></i></span> <span class="author" itemprop="copyrightHolder">!!@_@ ᵛᵉ</span> <span class="post-meta-divider">|</span><span class="post-meta-item-icon"><i class="fa fa-area-chart"></i></span> <span title="站点总字数">213k</span> <span class="post-meta-divider">|</span><span class="post-meta-item-icon"><i class="fa fa-coffee"></i></span> <span title="站点阅读时长">3:14</span></div><div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动</div><span class="post-meta-divider">|</span><div class="theme-info">主题 – <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a></div><div class="busuanzi-count"><script pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span class="post-meta-item" id="busuanzi_container_site_uv" style="display:none"><span class="post-meta-item-icon"><i class="fa fa-user"></i></span><span class="site-uv" title="总访客量"><span id="busuanzi_value_site_uv"></span></span></span> <span class="post-meta-divider">|</span><span class="post-meta-item" id="busuanzi_container_site_pv" style="display:none"><span class="post-meta-item-icon"><i class="fa fa-eye"></i></span><span class="site-pv" title="总访问量"><span id="busuanzi_value_site_pv"></span></span></span></div><script pjax>function leancloudSelector(url) {
+    return document.getElementById(url).querySelector('.leancloud-visitors-count');
+  }
+  if (CONFIG.page.isPost) {
+    function addCount(Counter) {
+      var visitors = document.querySelector('.leancloud_visitors');
+      var url = visitors.getAttribute('id').trim();
+      var title = visitors.getAttribute('data-flag-title').trim();
+
+      Counter('get', `/classes/Counter?where=${JSON.stringify({ url })}`)
+        .then(response => response.json())
+        .then(({ results }) => {
+          if (results.length > 0) {
+            var counter = results[0];
+            Counter('put', '/classes/Counter/' + counter.objectId, { time: { '__op': 'Increment', 'amount': 1 } })
+              .then(response => response.json())
+              .then(() => {
+                leancloudSelector(url).innerText = counter.time + 1;
+              })
+            
+              .catch(error => {
+                console.log('Failed to save visitor count', error);
+              })
+          } else {
+              Counter('post', '/classes/Counter', { title: title, url: url, time: 1 })
+                .then(response => response.json())
+                .then(() => {
+                  leancloudSelector(url).innerText = 1;
+                })
+                .catch(error => {
+                  console.log('Failed to create', error);
+                });
+            
+          }
+        })
+        .catch(error => {
+          console.log('LeanCloud Counter Error', error);
+        });
+    }
+  } else {
+    function showTime(Counter) {
+      var visitors = document.querySelectorAll('.leancloud_visitors');
+      var entries = [...visitors].map(element => {
+        return element.getAttribute('id').trim();
+      });
+
+      Counter('get', `/classes/Counter?where=${JSON.stringify({ url: { '$in': entries } })}`)
+        .then(response => response.json())
+        .then(({ results }) => {
+          if (results.length === 0) {
+            document.querySelectorAll('.leancloud_visitors .leancloud-visitors-count').forEach(element => {
+              element.innerText = 0;
+            });
+            return;
+          }
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.url;
+            var time = item.time;
+            leancloudSelector(url).innerText = time;
+          }
+          for (var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = leancloudSelector(url);
+            if (element.innerText == '') {
+              element.innerText = 0;
+            }
+          }
+        })
+        .catch(error => {
+          console.log('LeanCloud Counter Error', error);
+        });
+    }
+  }
+
+  fetch('https://app-router.leancloud.cn/2/route?appId=DVv225OiXLJTYs0Imq4Kw1qL-gzGzoHsz')
+    .then(response => response.json())
+    .then(({ api_server }) => {
+      var Counter = (method, url, data) => {
+        return fetch(`https://${api_server}/1.1${url}`, {
+          method: method,
+          headers: {
+            'X-LC-Id': 'DVv225OiXLJTYs0Imq4Kw1qL-gzGzoHsz',
+            'X-LC-Key': 'Kv6XNKTrebkacDbh2zRCsVYA',
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data)
+        });
+      };
+      if (CONFIG.page.isPost) {
+        const localhost = /http:\/\/(localhost|127.0.0.1|0.0.0.0)/;
+        if (localhost.test(document.URL)) return;
+        addCount(Counter);
+      } else if (document.querySelectorAll('.post-title-link').length >= 1) {
+        showTime(Counter);
+      }
+    });</script></div></footer></div><script src="/lib/anime.min.js?v=3.1.0"></script><script src="//cdn.jsdelivr.net/npm/pjax/pjax.js"></script><script src="//cdn.jsdelivr.net/npm/medium-zoom@1/dist/medium-zoom.min.js"></script><script src="/lib/velocity/velocity.min.js?v=1.2.1"></script><script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script><script src="/js/utils.js?v=7.4.1.js"></script><script src="/js/motion.js?v=7.4.1.js"></script><script src="/js/schemes/muse.js?v=7.4.1.js"></script><script src="/js/next-boot.js?v=7.4.1.js"></script><script>var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.getAttribute('pjax') !== null) {
+      element.setAttribute('pjax', '');
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+});</script><script pjax>CONFIG.page.isPost&&(wpac_init=window.wpac_init||[],wpac_init.push({widget:"Rating",id:6194,el:"wpac-rating",color:"fc6423"}),function(){if(!("WIDGETPACK_LOADED"in window)){WIDGETPACK_LOADED=!0;var e=document.createElement("script");e.type="text/javascript",e.async=!0,e.src="//embed.widgetpack.com/widget.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t.nextSibling)}}())</script><script src="/js/local-search.js?v=7.4.1.js"></script><script pjax>if (document.querySelectorAll('pre.mermaid').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
+    mermaid.initialize({
+      theme: 'forest',
+      logLevel: 3,
+      flowchart: { curve: 'linear' },
+      gantt: { axisFormat: '%m/%d/%Y' },
+      sequence: { actorMargin: 50 }
+    });
+  }, window.mermaid);
+}</script><link rel="stylesheet" href="/lib/player/player.css"><div id="QPlayer"><div id="pContent"><div id="player"><span class="cover"></span><div class="ctrl"><div class="musicTag marquee"><strong>Title</strong> <span>-</span> <span class="artist">Artist</span></div><div class="progress"><div class="timer left">0:00</div><div class="contr"><div class="rewind icon"></div><div class="playback icon"></div><div class="fastforward icon"></div></div><div class="right"><div class="liebiao icon"></div></div></div></div></div><div class="ssBtn"><div class="adf on"></div></div></div><ol id="playlist"></ol></div><script>var playlist=[];playlist.push({title:"再见杰克",artist:"痛仰乐队",mp3:"https://cdn.jsdelivr.net/gh/0vo/oss/mp3/痛仰乐队%20-%20再见杰克.mp3",cover:"https://cdn.jsdelivr.net/gh/0vo/oss/mp3/痛仰乐队%20-%20再见杰克.jpg"}),playlist.push({title:"公路之歌",artist:"痛仰乐队",mp3:"https://cdn.jsdelivr.net/gh/0vo/oss/mp3/痛仰乐队%20-%20公路之歌.mp3",cover:"https://cdn.jsdelivr.net/gh/0vo/oss/mp3/痛仰乐队%20-%20再见杰克.jpg"}),playlist.push({title:"时光机",artist:"周杰伦",mp3:"https://cdn.jsdelivr.net/gh/0vo/oss/mp3/周杰伦%20-%20时光机.mp3",cover:"https://y.gtimg.cn/music/photo_new/T002R300x300M000002Neh8l0uciQZ.jpg"}),playlist.push({title:"一路向北",artist:"周杰伦",mp3:"https://cdn.jsdelivr.net/gh/0vo/oss/mp3/周杰伦-一路向北.mp3",cover:"https://cdn.jsdelivr.net/gh/0vo/oss/mp3/%E5%91%A8%E6%9D%B0%E4%BC%A6%20-%20%E4%B8%80%E8%B7%AF%E5%90%91%E5%8C%97.jpg"}),playlist.push({title:"ビンクスの酒 (宾克斯的美酒)",artist:"麦わらの一味 (草帽海贼团)",mp3:"https://cdn.jsdelivr.net/gh/0vo/oss/mp3/%E3%83%93%E3%83%B3%E3%82%AF%E3%82%B9%E3%81%AE%E9%85%92%20(%E5%AE%BE%E5%85%8B%E6%96%AF%E7%9A%84%E7%BE%8E%E9%85%92).mp3",cover:"https://y.gtimg.cn/music/photo_new/T002R300x300M00000367oF43ZdHan.jpg"}),playlist.push({title:"青鸟 ブルーバード",artist:"火影",mp3:"https://cdn.jsdelivr.net/gh/0vo/oss/mp3/青鸟%20ブルーバード.mp3",cover:"https://y.gtimg.cn/music/photo_new/T002R300x300M000001GUvKQ3q6Tdr.jpg"}),playlist.push({title:"Five Hundred Miles",artist:"醉乡民谣",mp3:"https://cdn.jsdelivr.net/gh/0vo/oss/mp3/Five-Hundred-Miles.mp3",cover:"https://y.gtimg.cn/music/photo_new/T002R300x300M000003NY5cG15yFa7.jpg"}),playlist.push({title:"Scarborough Fair/Canticle",artist:"Simon & Garfunkel",mp3:"https://cdn.jsdelivr.net/gh/0vo/oss/mp3/Scarborough-Fair.mp3",cover:"https://y.gtimg.cn/music/photo_new/T002R300x300M000003U9s1H1EEBvn.jpg"}),playlist.push({title:"What are words",artist:"What are words",mp3:"https://cdn.jsdelivr.net/gh/0vo/oss/mp3/What-are-words.mp3",cover:"https://y.gtimg.cn/music/photo_new/T002R300x300M000003N49f81g9SE1.jpg"}),playlist.push({title:"See You Again",artist:"Taylor Gang Timeline (Mixtape)",mp3:"https://cdn.jsdelivr.net/gh/0vo/oss/mp3/See-You-Again.mp3",cover:"https://y.gtimg.cn/music/photo_new/T002R300x300M000003K7HZQ04YTIF.jpg"});var isRotate=!0,autoplay=!1,showBtn=!1</script><script>function bgChange(){for(var n=$(".lib"),g=0;g<n.length;g+=2)n[g].style.background="rgba(246, 246, 246, 0.5)"}window.onload=bgChange</script><script src="/lib/jquery/index.js"></script><script src="/lib/player/jquery.marquee.min.js"></script><script src="/lib/player/player.js"></script><div id="pjax"><script>var checkDisqus=function(){return""!=$.trim($("iframe[id^=dsq-app]").attr("id"))},removeWarnInfo=function(){checkDisqus()&&($("#dqs_loading").remove(),$("#reload_div").remove())},addWarnInfo=function(){checkDisqus()||($("#dqs_loading").remove(),$("#disqus_thread").append('<div style="text-align: center;" id="reload_div">Loaded Disqus Failured. Please Ensure You Can Access [disqus.com] ! Then <a href="javascript:void(0);" onclick="loadComments();">Reload</a>!</div>'))},disqus_config=function(){this.page.url="https://ehlxr.me/2016/07/23/%E4%BD%BF%E7%94%A8Hexo%E5%9F%BA%E4%BA%8EGitHub-Pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%80%EF%BC%89/",this.page.identifier="2016/07/23/使用Hexo基于GitHub-Pages搭建个人博客（一）/",this.page.title="使用Hexo基于GitHub Pages搭建个人博客（一）"};function loadComments(){if($("#disqus_thread").empty().append('<div id="dqs_loading" class="dqs_loading"><div id="dqs_loading_inner" class="dqs_loading_inner"></div></div>'),setTimeout("addWarnInfo()",5e3),$("#disqus_thread").bind("DOMNodeInserted",removeWarnInfo),window.DISQUS)DISQUS.reset({reload:!0,config:disqus_config});else{var e=document,i=e.createElement("script");i.src="https://ehlxr.disqus.com/embed.js",i.setAttribute("data-timestamp",""+ +new Date),(e.head||e.body).appendChild(i)}}$(function(){$(".comment-button.disqus").click(function(){loadComments()})})</script><div id="needsharebutton-float"><span class="btn"><i class="fa fa-share-alt" aria-hidden="true"></i></span></div><script src="//cdn.jsdelivr.net/gh/theme-next/theme-next-needmoreshare2@1/needsharebutton.min.js"></script><script>pbOptions={iconStyle:"default",boxForm:"horizontal",position:"bottomCenter",networks:"Weibo,Wechat,Douban,Evernote,QQZone,Twitter,Facebook,GooglePlus,Tumblr,Linkedin"},new needShareButton("#needsharebutton-postbottom",pbOptions),flOptions={iconStyle:"default",boxForm:"horizontal",position:"topRight",networks:"Weibo,Wechat,Douban,Evernote,QQZone,Twitter,Facebook,GooglePlus,Tumblr,Linkedin"},new needShareButton("#needsharebutton-float",flOptions)</script><script>((w, d) => {
+    'use strict';
+      // d.documentElement.className = 'darkScheme';
+      const btn = d.querySelector('.night-btn');
+
+      var clickAction = function () {
+        d.documentElement.classList.toggle('darkScheme');
+        if ( d.documentElement.classList.contains('darkScheme') ) {
+          localStorage.setItem('Scheme', 'Dark');
+        } else {
+          localStorage.removeItem('Scheme');
+        }
+      }
+
+      const hasClickListener = localStorage.getItem('hasClickListener');
+      if(!hasClickListener){
+        btn.addEventListener('click', clickAction, false);
+        localStorage.setItem('hasClickListener', true);
+      }
+  })(window, document);</script><link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"><script>NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID: '0365accc0a9b9a7cfb02',
+      clientSecret: 'fd685f862940e0440c800fbd96f6b8c1b21bfe8b',
+      // accessToken: '',
+      repo: 'ehlxr.me',
+      owner: 'ehlxr',
+      admin: ['ehlxr'],
+      // ehlxr
+      // id: 'c40204cfc5fb9c2c2c67a4267e879d12'
+      // id: '/2016/07/23/%E4%BD%BF%E7%94%A8Hexo%E5%9F%BA%E4%BA%8EGitHub-Pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%80%EF%BC%89/',
+      id: '/2016/07/23/使用Hexo基于GitHub-Pages搭建个人博客（一）/',
+      // body: 'https://ehlxr.me/2016/07/23/%E4%BD%BF%E7%94%A8Hexo%E5%9F%BA%E4%BA%8EGitHub-Pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%80%EF%BC%89/',
+      body: 'https://ehlxr.me/2016/07/23/使用Hexo基于GitHub-Pages搭建个人博客（一）/',
+        language: window.navigator.language || window.navigator.userLanguage,
+      
+      // ehlxr distraction_free_mode 设置 bug
+      distractionFreeMode: false
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);</script><script>NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail,link';
+  guest = guest.split(',').filter(item => {
+    return GUEST.includes(item);
+  });
+  new Valine({
+    el: '#comments',
+    verify: false,
+    notify: false,
+    appId: 'c4sS2ybYQtvpyjiHDVw4mjsx-gzGzoHsz',
+    appKey: 'Jk2rTF2UusPYm6632MNnaCqv',
+    placeholder: '说点什么吧...',
+    avatar: 'mm',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: false,
+    lang: '' || 'zh-cn',
+    // ehlxr
+    path: '/2016/07/23/%E4%BD%BF%E7%94%A8Hexo%E5%9F%BA%E4%BA%8EGitHub-Pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%80%EF%BC%89/',
+    recordIP: false,
+    serverURLs: ''
+  });
+}, window.Valine);</script></div></body></html>
